@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="estilo.css">
+<style type="text/css">
+*{
+padding:0px;
+margin:0px;
+}
+
+#header {
+margin: auto;
+width: 500px;
+}
+
+ul, ol {
+list-style:none;
+border-color:pink;
+}
+
+.nav li a {
+background-color:#66CCFF;
+text-decoration:none;
+padding:10px 15px;
+display:block;
+}
+
+.nav>li{
+float:left;
+}
+.nav li a:hover{
+background-color:#5C7AFF;
+}
+
+.nav li ul{
+display:none;
+position:absolute;
+min-width:140px;
+}
+
+.nav li:hover>ul{
+display:block;
+}
+</style>
+</head>
+
+<body>
+
+<h1 style="text-align:center; font-family:courier";>Bienvenido</h1>
+
+
+<ul class="menu">
+<li><a href="index.html"> Atras</a></li>
+</ul>
+
+
+<div style="text-align:center; background-color:#9999FF;">
+<p style="color:white">Aqui se encuentra la lista con las categorias de lugares que tenemos para usted.</p>
+<ul class="nav">
+<li><a href="">Ferreterias</a>
+<ul>
+<li><a href="">San Jose</a></li>
+<li><a href="">Alajuela</a></li>
+<li><a href="">Cartago</a></li>
+<li><a href="">Heredia</a></li>
+<li><a href="">Puntarenas</a></li>
+<li><a href="">Guanacaste</a></li>
+<li><a href="">Limon</a></li>
+
+</ul>
+</ul>
+</li>
+</div>
+
+
+</body>
+</html>
