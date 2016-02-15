@@ -1,0 +1,102 @@
+/*Creacion de la base de datos*/
+CREATE DATABASE geomaps;
+
+use geomaps;
+
+
+
+
+/*Creacion de la tabla persona que son los usuario que ingresan a la pagina web */
+CREATE TABLE persona( 
+email varchar(50) NOT NULL, 
+primer_nombre varchar(13) NOT NULL,
+segundo_nombre varchar(13), 
+primer_apellido varchar(15) NOT NULL,
+segundo_apellido varchar(15),
+pass varchar(20) not null,
+primary key(email)
+);
+
+
+/*Tabla tipoLugar en donde van alojados todos los lugares segun el tipo de lugar que sean */
+create table tipoLugar(
+id_tipoLugar tinyint not null,
+descripcion varchar(100) not null,
+primary key(id_tipoLugar)
+);
+
+/*Tabla de los lugares que viene con la latitud y longitud y la informacion del lugar */
+create table lugar(
+cedula_juridica int not null,
+id_tipoLugar tinyint not null,
+nombre varchar(40) not null,
+longitud decimal(6,4) not null,
+latitud decimal(6,4) not null,
+email varchar(50) not null,
+numero_telefono int not null,
+horario varchar(50) not null,
+primary key(cedula_juridica),
+foreign key(id_tipoLugar) references tipoLugar(id_tipoLugar)
+);
+
+/*Procedimiento almacenado que valida si la el nombre de usuario y contraseña estan correctos*/
+
+DELIMITER //
+CREATE PROCEDURE validar (IN emailusu varchar(50), IN passusu varchar(20))
+BEGIN
+SELECT 
+   *
+FROM
+  persona p 
+	WHERE 
+    p.email=emailusu
+    AND
+    p.pass=passusu;
+END //
+DELIMITER ;
+
+/*Procedimiento almacenado para llamar un lugar al ingresar a la pagina*/
+
+DELIMITER //
+CREATE PROCEDURE lugar (IN nombrelu varchar(40))
+BEGIN
+SELECT 
+   *
+FROM
+  lugar l 
+	WHERE 
+    l.nombre=nombrelu;
+    
+END //
+DELIMITER ;
+
+/*Procedimiento alamcenado que se utiliza para insertar un nuevo usuario*/
+
+DELIMITER //
+CREATE PROCEDURE insertarPersona(
+in emailUsu varchar(50), 
+in primerNombreUsu varchar(13), 
+in segundoNombreUsu varchar(13), 
+in primerApellidoUsu varchar(13), 
+in segundoApellidoUsu varchar(13), 
+in passUsu varchar(20)
+)
+BEGIN
+INSERT INTO persona (
+email, 
+primer_nombre, 
+segundo_nombre, 
+primer_apellido, 
+segundo_apellido, 
+pass
+) 
+VALUES(
+emailUsu,
+primerNombreUsu,
+segundoNombreUsu,
+primerApellidoUsu,
+segundoApellidoUsu,
+passUsu
+);
+END //
+DELIMITER ;
