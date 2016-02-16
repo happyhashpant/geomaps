@@ -3,9 +3,6 @@ CREATE DATABASE geomaps;
 
 use geomaps;
 
-
-
-
 /*Creacion de la tabla persona que son los usuario que ingresan a la pagina web */
 CREATE TABLE persona( 
 email varchar(50) NOT NULL, 
