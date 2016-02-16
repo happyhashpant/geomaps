@@ -1,0 +1,32 @@
+ul, ol {
+list-style:none;
+}
+
+.nav li spam{
+font-size:40px;
+}
+.nav li a {
+color:white;
+background-color:#66CCFF;
+text-decoration:none;
+padding:10px 15px;
+display:block;
+}
+
+.nav>li{
+float:left;
+}
+.nav li a:hover{
+background-color:#5C7AFF;
+}
+	
+
+.nav li ul{
+display:none;
+position:absolute;
+min-width:140px;
+}
+
+.nav li:hover>ul{
+display:block;
+}
