@@ -2,25 +2,89 @@
 <html>
 
 <head>
+<!-- 
+Estas son las paginas que se utilizan en este html
+-->
 <title>Index</title>
 <link rel="stylesheet" type="text/css" href="estilo.css">
+<link rel="stylesheet" type="text/css" href="fonts/style.css">
+<link rel="stylesheet" type="text/css" href="estiloSlide.css">
+<link rel="stylesheet" type="text/css" href="estiloMenu.css">
+<!-- 
+Tipo de estilo que se le agrega aparte de los que se importan desde un css
+-->
+<style type:"text/css">
+	*{
+padding:0px;
+margin:0px;
+}
 
+#header {
+margin: auto;
+width: 500px;
+}
+</style>
+	
 </head>
 
-<body class="contenido">
+<body>
+	<div>
 <h1 style="text-align:center;";>GeoMaps</h1>
-</body>
-<body class="paramenu">
-<ul class="menu">
-<li><a href="acerca.html"> Acerca</a></li>
-<li><a href="nuevoUsuario.html"> Nuevo usuario</a></li>
-<li><a href="login.html">Iniciar sesion</a></li>
-<li><a href="contacto.html">Contactenos</a></li>
-</ul>
-</body>
-<body class="contenido">
-<h1 class="tituloprincipal" style="text-align:center"> Gracias por su visita</h1>
+<br>
+<br>
+		
+</div>	
+<ul class="nav">
+<li style="width:100%"><a href=""><spam class="icon-th-menu"></spam></a>
+<ul>
+<li><a href="acerca.html"><span class="icon-info-large"></span> Acerca</a></li>
+<li><a href="nuevoUsuario.html"><span class="icon-user-add"></span> Nuevo Usuario</a></li>
+<li><a href="login.html"><span class="icon-user"></span> Iniciar sesion</a></li>
+<li><a href="contacto.html"><span class="icon-warning"></span> Contactenos</a></li>
 
+</ul>
+</ul>
+
+	
+<div>	
+</div>	
+	<div class="slides">
+		<img src ="imagenes/1.jpg" alt="">
+		<img src ="imagenes/2.jpg" alt="">
+		<img src ="imagenes/3.jpg" alt="">
+		<img src ="imagenes/4.jpg" alt="">
+	</div>
+<div>
+	<!-- 
+Estos son los js que se importan para el funcionamiento del slide
+-->
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="js/jquery.slides.js"></script>
+	<script>
+	$(function(){
+  $(".slides").slidesjs({
+    play: {
+      active: true,
+        // [boolean] Generate the play and stop buttons.
+        // You cannot use your own buttons. Sorry.
+      effect: "fade",
+        // [string] Can be either "slide" or "fade".
+      interval: 5000,
+        // [number] Time spent on each slide in milliseconds.
+      auto: true,
+        // [boolean] Start playing the slideshow on load.
+      swap: true,
+        // [boolean] show/hide stop and play buttons
+      pauseOnHover: false,
+        // [boolean] pause a playing slideshow on hover
+      restartDelay: 2500
+        // [number] restart delay on inactive slideshow
+    }
+  });
+});
+	</script>
+<h1 style="text-align:center"> Gracias por su visita</h1>
+</div>
 </body>
 
 </html>
