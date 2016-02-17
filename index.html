@@ -2,89 +2,131 @@
 <html>
 
 <head>
+	
 <!-- 
 Estas son las paginas que se utilizan en este html
 -->
+	
 <title>Index</title>
+	
 <link rel="stylesheet" type="text/css" href="estilo.css">
 <link rel="stylesheet" type="text/css" href="fonts/style.css">
 <link rel="stylesheet" type="text/css" href="estiloSlide.css">
 <link rel="stylesheet" type="text/css" href="estiloMenu.css">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	
 <!-- 
 Tipo de estilo que se le agrega aparte de los que se importan desde un css
 -->
+	
 <style type:"text/css">
-	*{
-padding:0px;
-margin:0px;
+*{
+	box-sizing:border-box;
 }
-
-#header {
-margin: auto;
-width: 500px;
+	
+.header {
+	padding:20px;
+}
+	
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+	
+[class*="col-"] {
+    float: left;
+    padding:15px;
+}
+	
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+	
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
 }
 </style>
 	
 </head>
 
 <body>
-	<div>
-<h1 style="text-align:center;";>GeoMaps</h1>
-<br>
-<br>
-		
-</div>	
-<ul class="nav">
-<li style="width:100%"><a href=""><spam class="icon-th-menu"></spam></a>
-<ul>
-<li><a href="acerca.html"><span class="icon-info-large"></span> Acerca</a></li>
-<li><a href="nuevoUsuario.html"><span class="icon-user-add"></span> Nuevo Usuario</a></li>
-<li><a href="login.html"><span class="icon-user"></span> Iniciar sesion</a></li>
-<li><a href="contacto.html"><span class="icon-warning"></span> Contactenos</a></li>
-
-</ul>
-</ul>
-
 	
-<div>	
-</div>	
+<div class="header">
+<h1 style="text-align:center">Geopmaps</h1>
+</div>
+	
+<div>
+	
+<ul class="nav">
+	<li style="width:100%"><a href=""><spam class="icon-th-menu"></spam></a>
+	<ul>
+		<li><a href="acerca.html"><span class="icon-info-large"></span> Acerca</a></li>
+		<li><a href="nuevoUsuario.html"><span class="icon-user-add"></span> Nuevo Usuario</a></li>
+		<li><a href="login.html"><span class="icon-user"></span> Iniciar sesion</a></li>
+		<li><a href="contacto.html"><span class="icon-warning"></span> Contactenos</a></li>
+
+	</ul>
+</ul>
+	
+</div>
+	
+<div class="colm-12">
 	<div class="slides">
 		<img src ="imagenes/1.jpg" alt="">
 		<img src ="imagenes/2.jpg" alt="">
 		<img src ="imagenes/3.jpg" alt="">
-		<img src ="imagenes/4.jpg" alt="">
+		<img src ="imagenes/4.jpg" alt="">		
 	</div>
-<div>
+</div>
+	
 	<!-- 
 Estos son los js que se importan para el funcionamiento del slide
 -->
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="js/jquery.slides.js"></script>
-	<script>
+	
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="js/jquery.slides.js"></script>
+<script>
 	$(function(){
-  $(".slides").slidesjs({
-    play: {
-      active: true,
-        // [boolean] Generate the play and stop buttons.
-        // You cannot use your own buttons. Sorry.
-      effect: "fade",
-        // [string] Can be either "slide" or "fade".
-      interval: 5000,
-        // [number] Time spent on each slide in milliseconds.
-      auto: true,
-        // [boolean] Start playing the slideshow on load.
-      swap: true,
-        // [boolean] show/hide stop and play buttons
-      pauseOnHover: false,
-        // [boolean] pause a playing slideshow on hover
-      restartDelay: 2500
-        // [number] restart delay on inactive slideshow
-    }
-  });
-});
-	</script>
-<h1 style="text-align:center"> Gracias por su visita</h1>
+  		$(".slides").slidesjs({
+    		play: {
+      			active: true,
+        		// [boolean] Generate the play and stop buttons.
+        		// You cannot use your own buttons. Sorry.
+      			effect: "fade",
+        		// [string] Can be either "slide" or "fade".
+      			interval: 5000,
+        		// [number] Time spent on each slide in milliseconds.
+      			auto: true,
+        		// [boolean] Start playing the slideshow on load.
+      			swap: true,
+        		// [boolean] show/hide stop and play buttons
+      			pauseOnHover: false,
+        		// [boolean] pause a playing slideshow on hover
+      			restartDelay: 2500
+        		// [number] restart delay on inactive slideshow
+    		}	
+  		});
+	});
+</script>
+	
+<div class="header">
+	<h1 style="text-align:center"> Gracias por su visita</h1>
 </div>
+	
 </body>
 
 </html>
