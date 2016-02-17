@@ -4,10 +4,10 @@ Color de los titulos de las paginas
 h1{	
 	background-color: #66CCFF;
 }
+
 /*
 Color del cuerpo de la pagina
 */
-	body{
-		background-color: #99CCFF;
-	}
-	
+body{
+	background-color: #99CCFF;
+}
