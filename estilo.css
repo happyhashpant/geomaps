@@ -1,47 +1,13 @@
 /*
 Color de los titulos de las paginas
 */	
-h1{background-color: #66CCFF;
-	margin-right: 200px;
-	margin-left: 200px;}
+h1{	
+	background-color: #66CCFF;
+}
 
 /*
 Color del cuerpo de la pagina
 */
-	body{background-color: #99CCFF;}
-	
-	/*
-diseño de los menus
-*/
-	ul.menu {
-    		padding: 0;
-	}
-
-	ul.menu li {
-    		display: inline;
-	}
-
-	ul.menu li a {
-    		background-color:#66CCFF;
-    		color: white;
-    		padding: 10px 20px;
-    		text-decoration: none;
-    		border-radius: 4px 4px 0 0;
-	}
-
-	ul.menu li a:hover {
-    		background-color:#5C7AFF;
-	}
-	ul.menu .nav >li{
-		float:left;
-		
-	}
-	/*
-Diseño de las div
-*/
-	div {
-	margin-right: 200px;
-	margin-left: 200px;
-    border-radius: 5px;
-    padding: 40px;
-	}
+body{
+	background-color: #99CCFF;
+}
